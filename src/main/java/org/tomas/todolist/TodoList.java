@@ -14,10 +14,12 @@ public class TodoList {
 
     }
 
+    //agrega una tarea a la lista
     public void addTask(Task task) {
         this.taskList.add(task);
     }
 
+    //elimina una tarea de la lista
     public void deleteTask(Task task) {
         if (taskList.contains(task)) {
             taskList.remove(task);
@@ -26,6 +28,7 @@ public class TodoList {
         }
     }
 
+    //edita una tarea de la lista
     public void updateTask(Task task) {
         int index = taskList.indexOf(task);
         if (index >= 0) {
@@ -39,10 +42,4 @@ public class TodoList {
         return new ArrayList<>(taskList); // Devuelve una copia de la lista para evitar modificaciones externas
     }
 
-    /*
-     * marcar tarea como completada
-     * //agregar prioridad y fecha limite(?
-     * //filtros para ordenar por fecha y prioridad
-     *
-     * */
 }
